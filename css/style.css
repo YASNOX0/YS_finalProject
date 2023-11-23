@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 10px;
+  }
+  
+  figure {
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  figcaption {
+    margin: 10px;
+  }
+  
+  /* Tablet view */
+  @media (min-width: 772px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  
+    figure {
+        border-radius: 50%; 
+    }
+  
+    .grid figure:last-child {
+        grid-column: span 2; 
+    }
+  }
+  
+  
+  @media (min-width: 992px) {
+    .grid figure:nth-child(3n) {
+        grid-column: span 2; 
+        border-radius: 0; 
+    }
+  }
+  
+  
+  @media (prefers-color-scheme: dark) {
+    .grid figure {
+        background-color: #333; 
+        color: #ffeb3b; 
+        border-color: #000; 
+    }
+  }
